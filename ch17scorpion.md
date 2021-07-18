@@ -7,13 +7,14 @@ Extract all IP addresses from files that start with "access.log" printing one IP
 ```
 ## Solution:
 
-`h` doesn't print file headers
-`o` only part of the lines that match
+`h` doesn't print file headers\
+`o` only part of the lines that match\
 `E` the pattern will be extended regex
-`\d` a digit
-`.` a literal . character (don't use backslash for it, otherwise it will think it is the wildcard)
-`{,3}` means at most 3 instances of the previous letter
+
+`[0-9]+\.` at least one digit (but can be more) followed by a decimal point (backslash so it's not the wildcard character)\
+`{3}` look for it 3 times exactly\
+`[0-9]+` at least one digit
 
 ```
-$ grep -rhoE --include=\*access.log\* "\d{,3}.\d{,3}.\d{,3}.\d{,3}"
+$ grep -rhoE --include=\*access.log\* "([0-9]+\.){3}[0-9]+"
 ```

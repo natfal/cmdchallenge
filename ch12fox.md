@@ -7,6 +7,8 @@ There are files in this challenge with different file extensions. Remove all fil
 ```
 ## Solution:
 
+NOTE: works recursively by default
+
 ```
 $ find -name "*.doc" -delete
 ```

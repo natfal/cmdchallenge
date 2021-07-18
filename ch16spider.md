@@ -9,6 +9,10 @@ Note that there are no files named access.log in the current directory, you will
 ```
 ## Solution:
 
+`h` don't print filename headers
+
+`--include==pattern` only files matching the pattern are searched (matched to full path file)
+
 ```
 $ grep -rh --include=\*access.log\* "500"
 ```
