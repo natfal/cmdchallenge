@@ -1,2 +1,2 @@
 # cmdchallenge
-[Command Challenge!](https://cmdchallenge.com) Solutions 
+[Command Challenge](https://cmdchallenge.com) Solutions 
